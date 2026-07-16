@@ -1,0 +1,12 @@
+{
+  "name": "pulse-static",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pure static web application for PULSE project, buildless with no external dependencies.",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "lint": "echo 'No lint needed'",
+    "build": "mkdir -p dist && cp -r css js index.html admin.html dist/"
+  }
+}

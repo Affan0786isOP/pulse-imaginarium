@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PULSE | Precision Latency Lab Suite</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Fixed Ambient Layout Elements -->
+    <div id="canvas-container"></div>
+    <div class="bg-grid" id="bg-grid"></div>
+    <div class="glow-orb" id="glow-orb-1" style="opacity: 0.12;"></div>
+    <div class="glow-orb" id="glow-orb-2" style="opacity: 0.12;"></div>
+
+    <div class="content-wrapper">
+      <!-- Navigation Header -->
+      <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo" id="nav-logo">
+          <div class="logo-icon-wrap">
+            <div class="logo-circle"></div>
+            <div class="logo-dot"></div>
+          </div>
+          PULSE
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="assessments.html" class="nav-link active">Assessments</a></li>
+          <li><a href="leaderboard.html" class="nav-link">Leaderboards</a></li>
+        </ul>
+        <div class="nav-actions">
+          <div class="nav-badge">
+            <span class="pulse-indicator"></span>
+            <span>SYSTEMS ONLINE</span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Assessments Module Suite -->
+      <section class="page-section container" id="labs" style="margin-top: 6rem; min-height: calc(100vh - 20rem);">
+        <div class="section-title-wrap">
+          <span class="section-label">Diagnostic Labs</span>
+          <h2 class="section-title text-gradient-cyan-blue">Precision Latency Lab Suite</h2>
+          <p class="section-description">
+            Scientific neuro-assessments designed to isolate spinal reflex speed, prefrontal sequence retrieval thresholds, and visual spatial coordinates.
+          </p>
+        </div>
+
+        <div class="card-grid" style="margin-top: 3rem;">
+          <!-- Lab 1 Card: Visual Reaction -->
+          <div class="glass-card assessment-card card-blue" id="lab-visual" style="cursor: pointer;">
+            <div class="assessment-header">
+              <div class="assessment-icon" style="color: var(--color-cyan);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+              </div>
+              <span class="assessment-status-badge badge-active">Lab Active</span>
+            </div>
+            <div class="assessment-info">
+              <h3 class="assessment-name">Visual Reaction Test</h3>
+              <p class="assessment-desc">Isolate retinal response speed against chromic light triggers. Measure spinal cortic motor execution latencies.</p>
+            </div>
+            <div class="assessment-meta">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Avg. Speed: ~210ms
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                Visual Cortex
+              </span>
+            </div>
+          </div>
+
+          <!-- Lab 2 Card: Color Response -->
+          <div class="glass-card assessment-card card-purple" id="lab-color" style="cursor: pointer;">
+            <div class="assessment-header">
+              <div class="assessment-icon" style="color: var(--color-purple);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+              </div>
+              <span class="assessment-status-badge badge-active">Lab Active</span>
+            </div>
+            <div class="assessment-info">
+              <h3 class="assessment-name">Color Response Test</h3>
+              <p class="assessment-desc">Evaluate selective attention and cognitive inhibition. Identify words vs colors under conflicting Stroop stimuli.</p>
+            </div>
+            <div class="assessment-meta">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Avg. Accuracy: ~92%
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                Prefrontal Lobe
+              </span>
+            </div>
+          </div>
+
+          <!-- Lab 3 Card: Direction Response -->
+          <div class="glass-card assessment-card card-cyan" id="lab-direction" style="cursor: pointer;">
+            <div class="assessment-header">
+              <div class="assessment-icon" style="color: var(--color-blue);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+              </div>
+              <span class="assessment-status-badge badge-active">Lab Active</span>
+            </div>
+            <div class="assessment-info">
+              <h3 class="assessment-name">Direction Response Test</h3>
+              <p class="assessment-desc">Measure visual spatial processing speed and motor integration. Map spatial coordinates to rapid directional inputs.</p>
+            </div>
+            <div class="assessment-meta">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Avg. Speed: ~280ms
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                Motor Cortex
+              </span>
+            </div>
+          </div>
+
+          <!-- Lab 4 Card: Memory Matrix -->
+          <div class="glass-card assessment-card card-purple" id="lab-memory" style="cursor: pointer;">
+            <div class="assessment-header">
+              <div class="assessment-icon" style="color: var(--color-purple);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </div>
+              <span class="assessment-status-badge badge-active">Lab Active</span>
+            </div>
+            <div class="assessment-info">
+              <h3 class="assessment-name">Memory Matrix</h3>
+              <p class="assessment-desc">Quantify spatial short-term working memory cache. Test prefrontal lobe synapses under progressive geometric grid overload.</p>
+            </div>
+            <div class="assessment-meta">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Avg. Level: 6-8
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                Temporal Lobe
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- User Registration Modal -->
+      <div class="modal-overlay" id="registration-modal">
+        <div class="modal-content" style="max-width: 440px;">
+          <div class="modal-icon-wrap" style="color: var(--color-cyan); border-color: var(--color-cyan); box-shadow: var(--glow-cyan); background: rgba(0, 242, 254, 0.1);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <h3 class="modal-title text-gradient-cyan-blue" style="font-family: var(--font-display); letter-spacing: 0.05em; font-size: 1.4rem;">PROFILE CALIBRATION</h3>
+          <p class="modal-text" style="font-size: 0.85rem; margin-top: -0.5rem; line-height: 1.5;">
+            Please enter your neural profile data before beginning diagnostic evaluations.
+          </p>
+          
+          <form id="registration-form" style="width: 100%; display: flex; flex-direction: column; gap: 1.25rem; text-align: left;">
+            <div class="input-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <label for="reg-name" style="font-family: var(--font-display); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-secondary);">Full Name</label>
+              <input type="text" id="reg-name" class="tech-input" placeholder="e.g. Shah Rukh Khan" required autocomplete="off" />
+            </div>
+            <div class="input-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <label for="reg-age" style="font-family: var(--font-display); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-secondary);">Age</label>
+              <input type="number" id="reg-age" class="tech-input" placeholder="e.g. 24" min="1" max="120" required />
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem; font-family: var(--font-display);">
+              Initialize Neural Profile
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Professional Footer -->
+      <footer class="footer" id="footer" style="margin-top: 6rem;">
+        <div class="container">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <a href="index.html" class="footer-logo">
+                PULSE
+              </a>
+              <p class="footer-tagline">
+                Measuring Human Response. One Millisecond at a Time. Gamified Cognitive Neuroscience Assessment Platform.
+              </p>
+            </div>
+
+            <div class="footer-links-col">
+              <span class="footer-col-title">Exhibition</span>
+              <ul class="footer-links-list">
+                <li><a href="index.html" class="footer-link">IMAGINARIUM 2026</a></li>
+                <li><span class="footer-link" style="color: var(--color-text-muted);">Delhi World Public School</span></li>
+                <li><span class="footer-link" style="color: var(--color-text-muted);">Noida Extension</span></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-col">
+              <span class="footer-col-title">Developer</span>
+              <ul class="footer-links-list">
+                <li><span class="footer-link" style="color: var(--color-text-primary); font-weight: 500;">Affan Ahmad Khan</span></li>
+                <li><span class="footer-link">Class XI Solo Project</span></li>
+                <li><span class="footer-link">Cognitive Neuroscience Lab</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div>
+              &copy; 2026 PULSE. Created for educational and scientific exhibition evaluation.
+            </div>
+            <div class="tech-badge-container">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag highlight">Vanilla ES6</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/leaderboard.js"></script>
+    <script src="js/assessments/visual.js"></script>
+    <script src="js/assessments/color.js"></script>
+    <script src="js/assessments/direction.js"></script>
+    <script src="js/assessments/memory.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

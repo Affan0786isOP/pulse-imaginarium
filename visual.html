@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PULSE | Retinal Latency Evaluation</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Fixed Ambient Layout Elements -->
+    <div id="canvas-container"></div>
+    <div class="bg-grid" id="bg-grid"></div>
+    <div class="glow-orb" id="glow-orb-1" style="opacity: 0.12;"></div>
+    <div class="glow-orb" id="glow-orb-2" style="opacity: 0.12;"></div>
+
+    <div class="content-wrapper">
+      <!-- Full-screen dedicated workspace -->
+      <div id="assessment-workspace" class="assessment-workspace-overlay active">
+        <header class="workspace-header">
+          <div class="workspace-meta">
+            <span class="pulse-indicator"></span>
+            <span id="workspace-module-title" style="font-family: var(--font-display); letter-spacing: 0.05em;">RETINAL LATENCY EVALUATION</span>
+          </div>
+          <div class="workspace-subject" id="workspace-user-display" style="font-family: var(--font-mono);">
+            SUBJECT: CALIBRATING...
+          </div>
+          <button class="btn-workspace-exit" id="btn-workspace-back" style="font-family: var(--font-display);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Abort Evaluation
+          </button>
+        </header>
+
+        <div class="workspace-body-stage" id="assessment-container">
+          <!-- Active testing arena is rendered dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/leaderboard.js"></script>
+    <script src="js/assessments/visual.js"></script>
+    <script src="js/assessments/color.js"></script>
+    <script src="js/assessments/direction.js"></script>
+    <script src="js/assessments/memory.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Page Controller -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const name = window.PULSE.storage.getItem('pulse_user_name');
+        const age = window.PULSE.storage.getItem('pulse_user_age');
+        if (!name || !age) {
+          window.location.href = 'assessments.html';
+          return;
+        }
+
+        const displayEl = document.getElementById('workspace-user-display');
+        if (displayEl) {
+          displayEl.textContent = `SUBJECT: ${name.toUpperCase()} | AGE: ${age}`;
+        }
+
+        const container = document.getElementById('assessment-container');
+        if (container && typeof window.PULSE.startVisualTest === 'function') {
+          window.PULSE.startVisualTest(container, () => {
+            window.PULSE.storage.setItem('pulse_active_analysis', 'visual');
+            const contentWrapper = document.querySelector('.content-wrapper');
+            if (contentWrapper) {
+              contentWrapper.style.transition = 'opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1)';
+              contentWrapper.style.transform = 'scale(0.98)';
+              contentWrapper.classList.remove('loaded');
+            }
+            setTimeout(() => {
+              window.location.href = 'analysis.html';
+            }, 350);
+          });
+        }
+
+        const backBtn = document.getElementById('btn-workspace-back');
+        if (backBtn) {
+          backBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const contentWrapper = document.querySelector('.content-wrapper');
+            if (contentWrapper) {
+              contentWrapper.style.transition = 'opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1)';
+              contentWrapper.style.transform = 'scale(0.98)';
+              contentWrapper.classList.remove('loaded');
+            }
+            setTimeout(() => {
+              window.location.href = 'assessments.html';
+            }, 350);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

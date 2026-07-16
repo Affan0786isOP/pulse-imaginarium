@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PULSE | About Neural Latency & Pathways</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Fixed Ambient Layout Elements -->
+    <div id="canvas-container"></div>
+    <div class="bg-grid" id="bg-grid"></div>
+    <div class="glow-orb" id="glow-orb-1" style="opacity: 0.12;"></div>
+    <div class="glow-orb" id="glow-orb-2" style="opacity: 0.12;"></div>
+
+    <div class="content-wrapper">
+      <!-- Navigation Header -->
+      <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo" id="nav-logo">
+          <div class="logo-icon-wrap">
+            <div class="logo-circle"></div>
+            <div class="logo-dot"></div>
+          </div>
+          PULSE
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="assessments.html" class="nav-link">Assessments</a></li>
+          <li><a href="leaderboard.html" class="nav-link">Leaderboards</a></li>
+        </ul>
+        <div class="nav-actions">
+          <div class="nav-badge">
+            <span class="pulse-indicator"></span>
+            <span>SYSTEMS ONLINE</span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- About Section -->
+      <section class="page-section container" id="about" style="margin-top: 6rem; min-height: calc(100vh - 20rem);">
+        <div class="section-title-wrap">
+          <span class="section-label">Core Philosophy</span>
+          <h2 class="section-title text-gradient-cyan-blue">Experience Science First, Learn Second</h2>
+          <p class="section-description">
+            PULSE believes that the best way to understand human biology is to put your body into the feedback loop. By playing, tracking, and comparing latencies, you discover the biological limits of synapses.
+          </p>
+        </div>
+
+        <div class="card-grid" style="margin-top: 3rem;">
+          <!-- Card 1: Stimulus Detection -->
+          <div class="glass-card" id="card-stimulus">
+            <div class="assessment-header" style="margin-bottom: 1.5rem;">
+              <div class="assessment-icon" style="color: var(--color-cyan);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m12 12-2 3h4l-2 3"/><path d="M12 4v4"/></svg>
+              </div>
+            </div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; font-weight: 700;">1. Stimulus Reception</h3>
+            <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.6;">
+              Whether visual, acoustic, or tactile—a stimulus triggers a receptor cell. Photons hit your retina, converting light into action potentials traveling at high velocities along the optic nerve.
+            </p>
+          </div>
+
+          <!-- Card 2: Synaptic Propagation -->
+          <div class="glass-card" id="card-propagation">
+            <div class="assessment-header" style="margin-bottom: 1.5rem;">
+              <div class="assessment-icon" style="color: var(--color-purple);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; font-weight: 700;">2. Axonal Conduction</h3>
+            <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.6;">
+              Action potentials travel down neuronal axons. In myelinated nerves, conduction jumps between nodes of Ranvier, allowing speeds up to 120 meters per second, versus a mere 1.5 m/s in unmyelinated fibers.
+            </p>
+          </div>
+
+          <!-- Card 3: Cortical Decision -->
+          <div class="glass-card" id="card-decision">
+            <div class="assessment-header" style="margin-bottom: 1.5rem;">
+              <div class="assessment-icon" style="color: var(--color-blue);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-4.88 2.5 2.5 0 0 1 0-3.12A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-3.12 3 3 0 0 0 0-4.88 2.5 2.5 0 0 0 0-3.12A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+              </div>
+            </div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; font-weight: 700;">3. Motor Output</h3>
+            <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.6;">
+              The sensory cortex communicates with the motor cortex. A decision signal is generated, traveling down the spinal cord to trigger muscle fibers, registering as a registered millisecond latency.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Footer -->
+      <footer class="footer" id="footer" style="margin-top: 6rem;">
+        <div class="container">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <a href="index.html" class="footer-logo">
+                PULSE
+              </a>
+              <p class="footer-tagline">
+                Measuring Human Response. One Millisecond at a Time. Gamified Cognitive Neuroscience Assessment Platform.
+              </p>
+            </div>
+
+            <div class="footer-links-col">
+              <span class="footer-col-title">Exhibition</span>
+              <ul class="footer-links-list">
+                <li><a href="index.html" class="footer-link">IMAGINARIUM 2026</a></li>
+                <li><span class="footer-link" style="color: var(--color-text-muted);">Delhi World Public School</span></li>
+                <li><span class="footer-link" style="color: var(--color-text-muted);">Noida Extension</span></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-col">
+              <span class="footer-col-title">Developer</span>
+              <ul class="footer-links-list">
+                <li><span class="footer-link" style="color: var(--color-text-primary); font-weight: 500;">Affan Ahmad Khan</span></li>
+                <li><span class="footer-link">Class XI Solo Project</span></li>
+                <li><span class="footer-link">Cognitive Neuroscience Lab</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div>
+              &copy; 2026 PULSE. Created for educational and scientific exhibition evaluation.
+            </div>
+            <div class="tech-badge-container">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag highlight">Vanilla ES6</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

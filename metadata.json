@@ -1,0 +1,6 @@
+{
+  "name": "PULSE",
+  "description": "Precision User Latency & Stimulus Evaluator. Measuring Human Response. One Millisecond at a Time.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

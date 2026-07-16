@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PULSE | Precision User Latency & Stimulus Evaluator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/assessments.css" />
+  </head>
+  <body>
+    <!-- Fixed Ambient Layout Elements -->
+    <div id="canvas-container"></div>
+    <div class="bg-grid" id="bg-grid"></div>
+    <div class="glow-orb" id="glow-orb-1"></div>
+    <div class="glow-orb" id="glow-orb-2"></div>
+
+    <!-- Futuristic Scientific Operating System Loader for PULSE -->
+    <div id="loading-screen">
+      <!-- Ambient background orbs and grid -->
+      <div class="loader-bg-glow">
+        <div class="loader-glow-orb loader-orb-cyan"></div>
+        <div class="loader-glow-orb loader-orb-purple"></div>
+      </div>
+      <div class="loader-grid"></div>
+      <div class="loader-scanline"></div>
+
+      <div class="loader-content">
+        <!-- Centerpiece Brand and Breathing Logo -->
+        <div class="loader-logo-area">
+          <div class="loader-pulse-visual">
+            <div class="loader-radial-waves">
+              <div class="wave wave-1"></div>
+              <div class="wave wave-2"></div>
+            </div>
+            <div class="loader-icon-core">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+          </div>
+          <h1 class="loader-brand-title">PULSE</h1>
+          <p class="loader-brand-subtitle">Precision User Latency & Stimulus Evaluator</p>
+        </div>
+
+        <!-- Sci-Fi HUD Console Panel -->
+        <div class="loader-hud-panel">
+          <div class="loader-hud-header">
+            <span class="hud-tag">SECURE COGNITIVE LINK</span>
+            <span class="hud-status" id="hud-status-node">NODE: ACTIVE</span>
+          </div>
+          
+          <div class="loader-progress-section">
+            <div class="loader-progress-track">
+              <div class="loader-progress-bar" id="loader-progress-bar"></div>
+            </div>
+            <div class="loader-progress-info">
+              <div class="loader-status-container">
+                <span class="loader-status-text" id="loader-status-text">INITIALIZING SYSTEMS...</span>
+              </div>
+              <span class="loader-percentage" id="loader-percentage">00%</span>
+            </div>
+          </div>
+
+          <div class="loader-hud-footer">
+            <span class="hud-meta">SYS_AUTH_VERIFIED</span>
+            <span class="hud-meta">FRAME_RATE: 60 FPS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <!-- 1. Navigation Header -->
+      <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo" id="nav-logo">
+          <div class="logo-icon-wrap">
+            <div class="logo-circle"></div>
+            <div class="logo-dot"></div>
+          </div>
+          PULSE
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="assessments.html" class="nav-link">Assessments</a></li>
+          <li><a href="leaderboard.html" class="nav-link">Leaderboards</a></li>
+        </ul>
+        <div class="nav-actions">
+          <div class="nav-badge">
+            <span class="pulse-indicator"></span>
+            <span>SYSTEMS ONLINE</span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- 2. Hero / Landing Section -->
+      <header class="hero-section container" id="home">
+        <div class="hero-grid">
+          <div class="hero-left">
+            <div class="exhibition-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.886L4.2 9.074l5.441 3.914L7.712 19 12 15.086 16.288 19l-1.929-6.012 5.441-3.914-5.888-.188z"/></svg>
+              IMAGINARIUM • DWPS Exhibition
+            </div>
+            <h1 class="hero-title">
+              PULSE
+            </h1>
+            <h2 class="hero-tagline text-gradient-cyan-blue">
+              Measuring Human Response.<br />One Millisecond at a Time.
+            </h2>
+            <p class="hero-description">
+              PULSE is an interactive cognitive exploration lab designed to capture the exact latency of your neural pathways. Discover the neurological and physiological speed boundaries of your brain through micro-assessments.
+            </p>
+            <div class="btn-group">
+              <a href="assessments.html" class="btn-primary" id="btn-enter-labs">
+                Enter the Labs
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#science" class="btn-secondary" id="btn-explore-science">
+                Explore Neuroscience
+              </a>
+            </div>
+            
+            <!-- Solo Developer Info -->
+            <div class="developer-attribution">
+              <div class="dev-avatar">AK</div>
+              <div class="dev-text">
+                <span class="dev-name">Affan Ahmad Khan</span>
+                <span>Solo Developer • Class XI, DWPS Noida Extension</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="pulse-core-container">
+              <div class="pulse-ring"></div>
+              <div class="pulse-ring"></div>
+              <div class="pulse-ring"></div>
+              <div class="core-brain">
+                <div class="core-inner">
+                  <!-- Custom Heartbeat/Pulse Vector -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- 3. About Section -->
+      <section class="page-section container" id="about">
+        <div class="section-title-wrap">
+          <span class="section-label">Core Philosophy</span>
+          <h2 class="section-title text-gradient-cyan-blue">Experience Science First, Learn Second</h2>
+          <p class="section-description">
+            PULSE believes that the best way to understand human biology is to put your body into the feedback loop. By playing, tracking, and comparing latencies, you discover the biological limits of synapses.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <!-- Card 1: Stimulus Detection -->
+          <div class="glass-card" id="card-stimulus">
+            <div class="assessment-header" style="margin-bottom: 1.5rem;">
+              <div class="assessment-icon" style="color: var(--color-cyan);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m12 12-2 3h4l-2 3"/><path d="M12 4v4"/></svg>
+              </div>
+            </div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; font-weight: 700;">1. Stimulus Reception</h3>
+            <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.6;">
+              Whether visual, acoustic, or tactile—a stimulus triggers a receptor cell. Photons hit your retina, converting light into action potentials traveling at high velocities along the optic nerve.
+            </p>
+          </div>
+
+          <!-- Card 2: Synaptic Propagation -->
+          <div class="glass-card" id="card-propagation">
+            <div class="assessment-header" style="margin-bottom: 1.5rem;">
+              <div class="assessment-icon" style="color: var(--color-purple);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; font-weight: 700;">2. Axonal Conduction</h3>
+            <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.6;">
+              Action potentials travel down neuronal axons. In myelinated nerves, conduction jumps between nodes of Ranvier, allowing speeds up to 120 meters per second, versus a mere 1.5 m/s in unmyelinated fibers.
+            </p>
+          </div>
+
+          <!-- Card 3: Cortical Decision -->
+          <div class="glass-card" id="card-decision">
+            <div class="assessment-header" style="margin-bottom: 1.5rem;">
+              <div class="assessment-icon" style="color: var(--color-blue);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-4.88 2.5 2.5 0 0 1 0-3.12A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-3.12 3 3 0 0 0 0-4.88 2.5 2.5 0 0 0 0-3.12A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+              </div>
+            </div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; font-weight: 700;">3. Motor Output</h3>
+            <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.6;">
+              The sensory cortex communicates with the motor cortex. A decision signal is generated, traveling down the spinal cord to trigger muscle fibers, registering as a registered millisecond latency.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Science Introduction Section -->
+      <section class="page-section container" id="science">
+        <div class="section-title-wrap">
+          <span class="section-label">Interactive Sandbox</span>
+          <h2 class="section-title text-gradient-purple-blue">The Neuroscience Corner</h2>
+          <p class="section-description">
+            Experiment with the biological parameters that directly dictate your micro-second reactions. Toggle insulation variables and test synaptic delays.
+          </p>
+        </div>
+
+        <div class="science-grid">
+          <div class="science-content">
+            <h3 class="science-heading">Neuro-Physical Latency Constants</h3>
+            <p class="science-lead text-gradient-cyan-blue">How fast are your reflex pathways really?</p>
+            <p class="science-text">
+              Every thought, motion, and reflex has a physiological cost. Your nerve conduction speed isn't instantaneous—it depends on chemical reactions and physical sheath configurations.
+            </p>
+            <p class="science-text">
+              In this interactive sandbox, simulate how electrical potentials travel along neural axons, or click the terminals to witness the chemical delay that occurs at the synaptic cleft between separate neurons.
+            </p>
+          </div>
+
+          <!-- Interactive Sandbox Unit -->
+          <div class="science-interactive-container">
+            <div class="science-tabs">
+              <button class="science-tab-btn active" data-tab="myelin" id="btn-tab-myelin">Axon Myelination</button>
+              <button class="science-tab-btn" data-tab="synapse" id="btn-tab-synapse">Synaptic Delay</button>
+            </div>
+
+            <!-- TAB 1: Myelination simulation -->
+            <div class="science-tab-content active" id="tab-myelin">
+              <div class="myelin-visualizer">
+                <div class="myelin-conduit-road">
+                  <div class="axon-cable"></div>
+                  <div class="myelin-sheaths-container">
+                    <div class="myelin-sheath"></div>
+                    <div class="myelin-sheath"></div>
+                    <div class="myelin-sheath"></div>
+                    <div class="myelin-sheath"></div>
+                  </div>
+                  <div class="node-of-ranvier" style="position: absolute; left: calc(2rem + 18% - 4px);"></div>
+                  <div class="node-of-ranvier" style="position: absolute; left: calc(2rem + 38% - 4px);"></div>
+                  <div class="node-of-ranvier" style="position: absolute; left: calc(2rem + 58% - 4px);"></div>
+                  <div class="node-of-ranvier" style="position: absolute; left: calc(2rem + 78% - 4px);"></div>
+                  <div class="signal-impulse" id="myelin-signal-dot"></div>
+                </div>
+
+                <div class="myelin-controls">
+                  <button class="myelin-toggle-btn" id="toggle-myelin-btn">Myelination: OFF</button>
+                  <div class="conduction-metric">
+                    Speed: <span class="conduction-speed" id="myelin-speed">1.5</span> <span style="color: var(--color-text-secondary)">m/s</span>
+                  </div>
+                </div>
+
+                <p class="science-text" id="myelin-desc" style="min-height: 70px; font-size: 0.85rem;">
+                  Unmyelinated axon relies on contiguous channel activation down the entire cell membrane, which drastically increases conduction latency.
+                </p>
+
+                <p class="conduction-metric" style="font-size: 0.8rem; color: var(--color-text-muted);">
+                  Conduction: <span style="color: var(--color-purple);" id="myelin-mode-label">Continuous (Slow Crawl)</span>
+                </p>
+
+                <button class="action-trigger-btn" id="trigger-myelin-sim">Simulate Action Potential</button>
+              </div>
+            </div>
+
+            <!-- TAB 2: Synaptic Delay simulation -->
+            <div class="science-tab-content" id="tab-synapse">
+              <div class="synaptic-visualizer">
+                <div class="synaptic-chamber">
+                  <!-- Presynaptic Terminal -->
+                  <div class="membrane-pre">
+                    <div class="vesicle-cluster">
+                      <div class="vesicle"></div>
+                      <div class="vesicle"></div>
+                      <div class="vesicle"></div>
+                    </div>
+                  </div>
+
+                  <!-- Synaptic Cleft Area -->
+                  <div class="synapse-gap-area"></div>
+
+                  <!-- Postsynaptic Membrane -->
+                  <div class="membrane-post">
+                    <div class="receptors-cluster">
+                      <div class="receptor-gate"></div>
+                      <div class="receptor-gate"></div>
+                      <div class="receptor-gate"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="delay-meter-output">
+                  <span class="delay-title">Chemical Transmission Latency:</span>
+                  <span class="delay-value" id="synaptic-delay-val">-- ms</span>
+                </div>
+
+                <p class="science-text" style="font-size: 0.85rem;">
+                  Nerves do not touch. Electrical impulses stop at axon terminals and must trigger chemical neurotransmitters to float across a 20nm synaptic cleft, adding an organic delay of 0.5 to 1.5ms per junction.
+                </p>
+
+                <button class="action-trigger-btn" style="background: var(--color-purple); box-shadow: var(--glow-purple); color: white;" id="trigger-synaptic-sim">Trigger Synaptic Vesicles</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 7. Professional Footer -->
+      <footer class="footer" id="footer">
+        <div class="container">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <a href="#home" class="footer-logo">
+                PULSE
+              </a>
+              <p class="footer-tagline">
+                Measuring Human Response. One Millisecond at a Time. Gamified Cognitive Neuroscience Assessment Platform.
+              </p>
+            </div>
+
+            <div class="footer-links-col">
+              <span class="footer-col-title">Exhibition</span>
+              <ul class="footer-links-list">
+                <li><a href="#home" class="footer-link">IMAGINARIUM 2026</a></li>
+                <li><span class="footer-link" style="color: var(--color-text-muted);">Delhi World Public School</span></li>
+                <li><span class="footer-link" style="color: var(--color-text-muted);">Noida Extension</span></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-col">
+              <span class="footer-col-title">Developer</span>
+              <ul class="footer-links-list">
+                <li><span class="footer-link" style="color: var(--color-text-primary); font-weight: 500;">Affan Ahmad Khan</span></li>
+                <li><span class="footer-link">Class XI Solo Project</span></li>
+                <li><span class="footer-link">Cognitive Neuroscience Lab</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div>
+              &copy; 2026 PULSE. Created for educational and scientific exhibition evaluation.
+            </div>
+            <div class="tech-badge-container">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag highlight">Vanilla ES6</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Main Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/leaderboard.js"></script>
+    <script src="js/assessments/visual.js"></script>
+    <script src="js/assessments/color.js"></script>
+    <script src="js/assessments/direction.js"></script>
+    <script src="js/assessments/memory.js"></script>
+    <script src="js/analysis.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

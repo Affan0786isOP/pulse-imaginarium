@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PULSE | System Administration Panel</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+  </head>
+  <body>
+    <!-- Immersive Ambient Sci-Fi Elements -->
+    <div id="canvas-container"></div>
+    <div class="loader-grid"></div>
+    <div class="loader-scanline" style="opacity: 0.35; animation-duration: 12s;"></div>
+    
+    <!-- Ambient Neon Orbs -->
+    <div class="loader-bg-glow">
+      <div class="loader-glow-orb loader-orb-cyan" style="opacity: 0.08; width: 600px; height: 600px; top: -10%; right: -5%;"></div>
+      <div class="loader-glow-orb loader-orb-purple" style="opacity: 0.08; width: 500px; height: 500px; bottom: -10%; left: -5%;"></div>
+    </div>
+
+    <div class="content-wrapper loaded">
+      <!-- High-Tech Navigation -->
+      <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo" id="nav-logo">
+          <div class="logo-icon-wrap">
+            <div class="logo-circle"></div>
+            <div class="logo-dot"></div>
+          </div>
+          PULSE
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Return to Core</a></li>
+        </ul>
+        <div class="nav-actions">
+          <div class="nav-badge admin-badge">
+            <span class="pulse-indicator admin-pulse-dot"></span>
+            <span class="badge-label">SYS_ADMIN_OVERRIDE</span>
+          </div>
+        </div>
+      </nav>
+
+      <div class="admin-container">
+        
+        <!-- ========================================== -->
+        <!-- SECURE SYSTEM AUTHORIZATION SCREEN (LOGIN) -->
+        <!-- ========================================== -->
+        <div class="admin-card login-box" id="login-screen">
+          <!-- Cyber Decoration Corners -->
+          <div class="cyber-corner top-left"></div>
+          <div class="cyber-corner top-right"></div>
+          <div class="cyber-corner bottom-left"></div>
+          <div class="cyber-corner bottom-right"></div>
+
+          <div class="login-header">
+            <div class="loader-pulse-visual" style="width: 80px; height: 80px; margin-bottom: 1rem;">
+              <div class="loader-radial-waves">
+                <div class="wave wave-1" style="border-color: rgba(157, 78, 221, 0.25);"></div>
+                <div class="wave wave-2" style="border-color: rgba(0, 242, 254, 0.25);"></div>
+              </div>
+              <div class="loader-icon-core" style="width: 55px; height: 55px; border-color: #9d4edd; box-shadow: 0 0 20px rgba(157, 78, 221, 0.35);">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#9d4edd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 24px; height: 24px; filter: drop-shadow(0 0 6px #9d4edd);">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </div>
+            </div>
+            <h1 class="system-title">PULSE OVERSEER</h1>
+            <span class="system-subtitle">Security Authentication Node</span>
+            <p class="system-warning-text">
+              Authorized personnel only. Access attempt monitored by local system diagnostic telemetry.
+            </p>
+          </div>
+
+          <!-- Live Boot Stream Simulator in Login -->
+          <div class="terminal-boot-box">
+            <div class="terminal-header">
+              <span class="term-dot red"></span>
+              <span class="term-dot yellow"></span>
+              <span class="term-dot green"></span>
+              <span class="term-title">SYS_AUTH_DAEMON</span>
+            </div>
+            <div class="terminal-body" id="login-terminal-logs">
+              <div class="term-line"><span class="t-cyan">[INFO]</span> Initializing secure node link...</div>
+              <div class="term-line"><span class="t-purple">[WARN]</span> Access is strictly monitored.</div>
+              <div class="term-line"><span class="t-gray">[WAIT]</span> Awaiting credentials...</div>
+            </div>
+          </div>
+
+          <form id="admin-login-form" class="login-form">
+            <div class="input-container">
+              <label for="admin-password" class="input-label">Override Authorization Key</label>
+              <div class="input-wrapper">
+                <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <input type="password" id="admin-password" class="tech-input" placeholder="ENTER ACCESS PIN" required autocomplete="current-password" autofocus />
+                <span class="input-focus-glow"></span>
+              </div>
+            </div>
+
+            <div class="feedback-msg error" id="login-error">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span>ACCESS DENIED: Credentials mismatch.</span>
+            </div>
+
+            <button type="submit" class="btn-primary auth-submit-btn">
+              <span>ESTABLISH LINK</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- ========================================== -->
+        <!--          RECONSTRUCTED MAIN DASHBOARD      -->
+        <!-- ========================================== -->
+        <div class="admin-card hidden-screen" id="dashboard-screen">
+          <!-- Cyber Decoration Corners -->
+          <div class="cyber-corner top-left"></div>
+          <div class="cyber-corner top-right"></div>
+          <div class="cyber-corner bottom-left"></div>
+          <div class="cyber-corner bottom-right"></div>
+
+          <!-- Dashboard Header -->
+          <div class="dash-header">
+            <div class="header-main-info">
+              <span class="badge-tag">CENTRAL HUB</span>
+              <h1 class="dash-title">OVERSEER CONTROL TERMINAL</h1>
+            </div>
+            <button class="btn-secondary" id="btn-logout">
+              <span>TERMINATE SESSION</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            </button>
+          </div>
+
+          <!-- Operational Alert Notice Banner -->
+          <div class="feedback-msg success" id="action-success">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span id="success-text">Database operation executed successfully.</span>
+          </div>
+
+          <!-- Metrics Widgets Block -->
+          <div class="dash-section">
+            <h3 class="panel-section-title text-cyan">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              Active Telemetry Indicators
+            </h3>
+            <div class="stats-grid">
+              <div class="stat-widget glow-cyan">
+                <span class="stat-label">STANDINGS COUNT</span>
+                <span class="stat-value text-cyan" id="stat-leaderboard-count">--</span>
+                <span class="stat-trend">Total Stored Records</span>
+              </div>
+              <div class="stat-widget glow-purple">
+                <span class="stat-label">SUBJECT IDENT</span>
+                <span class="stat-value text-purple" id="stat-user-status">--</span>
+                <span class="stat-trend">Active Profile</span>
+              </div>
+              <div class="stat-widget glow-blue">
+                <span class="stat-label">STORAGE BUDGET</span>
+                <span class="stat-value text-blue" id="stat-storage-usage">--</span>
+                <span class="stat-trend">Local cache usage</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Database Examiner (New Elite Feature) -->
+          <div class="dash-section border-top">
+            <h3 class="panel-section-title text-blue">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              Database Explorer
+            </h3>
+            <p class="admin-section-desc">Audit, filter, and inspect specific subject entries directly in the terminal registry.</p>
+            
+            <div class="db-examiner-container">
+              <div class="db-filter-bar">
+                <div class="db-search-box">
+                  <input type="text" id="db-search" placeholder="Filter by Name..." class="tech-search-input" />
+                </div>
+                <select id="db-filter-assessment" class="tech-select">
+                  <option value="all">All Assessments</option>
+                  <option value="visual">Visual Reflex</option>
+                  <option value="color">Stroop Color</option>
+                  <option value="direction">Directional Shift</option>
+                  <option value="memory">Matrix Memory</option>
+                </select>
+              </div>
+
+              <div class="db-table-scroll">
+                <table class="examiner-table" id="db-examiner-table">
+                  <thead>
+                    <tr>
+                      <th>Subject</th>
+                      <th>Age</th>
+                      <th>Assessment</th>
+                      <th class="align-right">Output Score</th>
+                      <th class="align-right" style="padding-right: 1rem;">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="db-examiner-tbody">
+                    <tr>
+                      <td colspan="5" class="table-loading">Querying active local caches...</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Operational Registries / Danger Zone -->
+          <div class="dash-section border-top">
+            <h3 class="panel-section-title text-red">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              System Purge Protocols
+            </h3>
+            <p class="admin-section-desc">Critical overrides to delete database logs, profile registrations, and revert system caches.</p>
+            
+            <div class="danger-protocols-grid">
+              <!-- Standing Tables Reset -->
+              <div class="protocol-card border-cyan">
+                <div class="protocol-info">
+                  <span class="protocol-title text-cyan">Wipe Standings Ledger</span>
+                  <p class="protocol-desc">Permanently empty the leaderboard database. All score logs across all assessments will be erased.</p>
+                </div>
+                <button class="btn-danger-glow glow-cyan" id="btn-reset-leaderboards">Wipe Ledgers</button>
+              </div>
+
+              <!-- Subject Profiles Reset -->
+              <div class="protocol-card border-purple">
+                <div class="protocol-info">
+                  <span class="protocol-title text-purple">De-Register Profiles</span>
+                  <p class="protocol-desc">Invalidate and clear currently registered subject names, ages, and active diagnostic calibrations.</p>
+                </div>
+                <button class="btn-danger-glow glow-purple" id="btn-clear-users">Purge Subjects</button>
+              </div>
+
+              <!-- Factory Reset -->
+              <div class="protocol-card border-red wide">
+                <div class="protocol-info">
+                  <span class="protocol-title text-red">Terminal Factory Reset</span>
+                  <p class="protocol-desc">Purge all local storage keys starting with <code class="tech-code">pulse_</code>, resetting the client environment back to original clean-room state. This action is catastrophic and cannot be undone.</p>
+                </div>
+                <button class="btn-danger-glow glow-red" id="btn-factory-reset">Execute Node Purge</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Real-Time Activity Terminal Widget (Redesigned) -->
+          <div class="dash-section border-top">
+            <h3 class="panel-section-title text-gray">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+              Live Telemetry Console Log
+            </h3>
+            <div class="terminal-boot-box terminal-dashboard-box">
+              <div class="terminal-header">
+                <span class="term-dot red"></span>
+                <span class="term-dot yellow"></span>
+                <span class="term-dot green"></span>
+                <span class="term-title">PULSE_SYS_LOGGER</span>
+                <span class="term-status-right text-cyan">OK // SECURE</span>
+              </div>
+              <div class="terminal-body" id="dashboard-terminal-logs">
+                <div class="term-line"><span class="t-green">[SYS_OK]</span> Overseer Control Session established.</div>
+                <div class="term-line"><span class="t-cyan">[SYS_INFO]</span> Querying local registry metadata...</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Action Return Link -->
+          <div class="dashboard-footer-actions">
+            <a href="index.html" class="btn-secondary flex-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+              Exit Terminal Access
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- High-Tech Modern Footer -->
+      <footer class="footer" id="footer" style="margin-top: auto; border-top: 1px solid var(--border-color); background: #000000; padding: 4rem 0 3rem 0; width: 100%;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+          <div class="footer-top" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 3rem; flex-wrap: wrap; gap: 2.5rem;">
+            <div class="footer-brand" style="display: flex; flex-direction: column; gap: 1rem; max-width: 320px;">
+              <a href="index.html" class="footer-logo" style="font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--color-text-primary); text-decoration: none; text-transform: uppercase;">
+                PULSE
+              </a>
+              <p class="footer-tagline" style="font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.5;">
+                Central Administrative Command. Access restricted to certified test officers.
+              </p>
+            </div>
+
+            <div class="footer-links-col">
+              <span class="footer-col-title">Exhibition</span>
+              <ul class="footer-links-list">
+                <li><a href="/" class="footer-link">IMAGINARIUM 2026</a></li>
+                <li><span class="footer-link" style="color: var(--color-text-muted);">Delhi World Public School</span></li>
+                <li><span class="footer-link" style="color: var(--color-text-muted);">Noida Extension</span></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-col">
+              <span class="footer-col-title">Developer</span>
+              <ul class="footer-links-list">
+                <li><span class="footer-link" style="color: var(--color-text-primary); font-weight: 500;">Affan Ahmad Khan</span></li>
+                <li><span class="footer-link">Class XI Solo Project</span></li>
+                <li><span class="footer-link">Cognitive Neuroscience Lab</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255, 255, 255, 0.04); padding-top: 2rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-muted); flex-wrap: wrap; gap: 1.5rem;">
+            <div>
+              &copy; 2026 PULSE. Created for educational and scientific exhibition evaluation.
+            </div>
+            <div class="tech-badge-container">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag highlight">Vanilla ES6</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ========================================== -->
+    <!--     ELITE CUSTOM HUD CONFIRMATION MODAL    -->
+    <!-- ========================================== -->
+    <div class="pulse-hud-modal" id="pulse-custom-modal">
+      <div class="pulse-modal-overlay"></div>
+      <div class="pulse-modal-container">
+        <!-- Cyber Decoration Corners -->
+        <div class="cyber-corner top-left"></div>
+        <div class="cyber-corner top-right"></div>
+        <div class="cyber-corner bottom-left"></div>
+        <div class="cyber-corner bottom-right"></div>
+
+        <div class="modal-glowing-glow" id="modal-theme-glow"></div>
+
+        <div class="pulse-modal-content">
+          <div class="modal-icon-area" id="modal-header-icon-wrap">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-red"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h2 class="modal-title" id="modal-title-text">AUTHORIZATION OVERRIDE Required</h2>
+          <p class="modal-description" id="modal-desc-text">
+            This action is destructive and will modify registry items on this node.
+          </p>
+
+          <div class="modal-danger-prompt" id="modal-warning-panel">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-red" style="flex-shrink:0;"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <span id="modal-warning-text">Database logs will be purged permanently.</span>
+          </div>
+
+          <div class="modal-actions-area">
+            <button class="btn-modal btn-cancel" id="modal-btn-cancel">ABORT PROTOCOL</button>
+            <button class="btn-modal btn-confirm" id="modal-btn-confirm">CONFIRM OVERRIDE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Admin module code -->
+    <script src="js/storage.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>
